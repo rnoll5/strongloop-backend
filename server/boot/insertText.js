@@ -6,10 +6,10 @@ module.exports = function(app) {
 
 	Question.destroyAll();
 
-	jsonArr.forEach(function(questionDict){
-		Question.create(questionDict, function(err, record) {
+	// jsonArr.forEach(function(questionDict){
+		Question.create(jsonArr, function(err, record) {
 			if (err) return console.log(err);
 		});
-	});
+	// });
 	console.log("Questions inserted successfully");
 };
